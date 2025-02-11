@@ -1,8 +1,8 @@
-NAME= Rubik
-CC= cc
-FLAG= -Wall -Werror -Wextra -g3
+NAME = Rubik
+CC = cc
+FLAG = -Wall -Werror -Wextra -g3
 
-SRC= main.c
+SRC = src/main.c
 OBJ_DIR= obj
 OBJ=$(SRC:.c=.o)
 OBJ=$(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
