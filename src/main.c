@@ -2,5 +2,10 @@
 
 int main()
 {
-    write(1, "salut\n", 6);
+    char ***faces;
+    
+    faces = malloc(sizeof(char **) * 7);
+    if (!faces)
+        return (NULL);
+    
 }
