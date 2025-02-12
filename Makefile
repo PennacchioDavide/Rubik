@@ -9,7 +9,7 @@ OBJ_DIR = obj
 
 SRC = main.c \
 		graphics/cube.c
-		
+	
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
 all: $(NAME)
