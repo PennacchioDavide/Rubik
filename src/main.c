@@ -3,44 +3,33 @@
 
 int main()
 {
-    char ***cube;
-    int i;
-    int f; 
-
-    cube = malloc(sizeof(char **) * 2);
+    char *cube = (char *) malloc(sizeof(char) * 54);
     if (!cube)
-        return (0);
-    cube[0] = malloc(sizeof(char *) * 7);
-    if (!*cube)
-        return (0);
-    for (i = 0; i < 6; i++) 
+        return NULL;
+
+    for(int i = 0; i < 6; i++)
     {
-        cube[0][i] = malloc(sizeof(char) * 9);
-        if (!cube[0][i])
-            return (1);
-    }
-    i = -1;
-    while (i++, i < 6)
-    {
-        f = -1;
-        while(f++, f < 9)
+        for (int j = 0; j < 3; j++)
         {
-            if (i == 0)
-                cube[0][i][f] = WHITE;
-            else if (i == 1)
-                cube[0][i][f] = RED;
-            else if (i == 2)
-                cube[0][i][f] = YELLOW;
-            else if (i == 3)
-                cube[0][i][f] = ORANGE;
-            else if (i == 4)
-                cube[0][i][f] = BLUE;
-            else if (i == 5)
-                cube[0][i][f] = GREEN;
-            printf("%c", cube[0][i][f]);
-            if ((f + 1) % 3 == 0)
-                printf("\n");
+            for (int k = 0; k < 3; k++)
+            {
+                *(cube + i + j + k) = BLUE;
+            }
         }
-        write(1, "\n", 1);
     }
+
+    for(int i = 0; i < 6; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            for (int k = 0; k < 3; k++)
+            {
+                printf("%c ", *(cube + i + j + k));
+            }
+            printf("\n");
+        }
+        printf("\n\n");
+    }
+
+    free(cube);
 }

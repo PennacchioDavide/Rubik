@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "filename": "c",
+        ".gitignore": "ignore",
+        "*.customext": "c",
+        "rubik.h": "c"
+    }
+}
