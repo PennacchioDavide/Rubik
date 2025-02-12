@@ -1,28 +1,28 @@
 #ifndef RUBIK_H
 #define RUBIK_H
 
-# ifndef BLUE
-# define BLUE 98
+# ifndef B
+# define B 98
 # endif
 
-# ifndef RED
-# define RED 114
+# ifndef R
+# define R 114
 # endif
 
-# ifndef YELLOW
-# define YELLOW 121
+# ifndef Y
+# define Y 121
 # endif
 
-# ifndef WHITE
-# define WHITE 119
+# ifndef W
+# define W 119
 # endif
 
-# ifndef GREEN
-# define GREEN 103
+# ifndef G
+# define G 103
 # endif
 
-# ifndef ORANGE
-# define ORANGE 111
+# ifndef O
+# define O 111
 # endif
 
 

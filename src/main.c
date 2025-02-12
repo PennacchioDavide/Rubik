@@ -1,11 +1,12 @@
 #include "../include/rubik.h"
+#include "../include/graphics/cube.h"
 
 
 int main()
 {
     char *cube = (char *) malloc(sizeof(char) * 54);
     if (!cube)
-        return NULL;
+        exit(1);
 
     for(int i = 0; i < 6; i++)
     {
@@ -13,7 +14,7 @@ int main()
         {
             for (int k = 0; k < 3; k++)
             {
-                *(cube + i + j + k) = BLUE;
+                *(cube + i + j + k) = B;
             }
         }
     }
@@ -32,4 +33,26 @@ int main()
     }
 
     free(cube);
+
+    const int screenWidth = 1280;
+    const int screenHeight = 720;
+
+    InitWindow(screenWidth, screenHeight, "Rubik");
+
+    SetTargetFPS(144);
+
+    while(!WindowShouldClose())
+    {
+        BeginDrawing();
+
+            ClearBackground(RAYWHITE);
+
+            DrawText("Hello", 190, 200, 20, LIGHTGRAY);
+
+        EndDrawing();
+    }
+
+    CloseWindow();
+
+    return 0;
 }
