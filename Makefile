@@ -1,19 +1,21 @@
 NAME = Rubik
 CC = cc
-FLAG = -Wall -Werror -Wextra -g3
 
-SRC = src/main.c
-OBJ_DIR= obj
-OBJ=$(SRC:.c=.o)
-OBJ=$(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
+FLAGS = -Wall -Werror -Wextra -g3
+
+SRC_DIR = src
+OBJ_DIR = obj
+
+SRC = main.c
+OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAG) -o $(NAME) $(OBJ)
+	$(CC) $(FLAGS) -o $(NAME) $(OBJ)
 
-$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
-	$(CC) $(FLAG) -c $< -o $@
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
