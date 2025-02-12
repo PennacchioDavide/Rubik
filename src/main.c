@@ -1,4 +1,5 @@
-#include <unistd.h>
+#include "../include/rubik.h"
+
 int main()
 {
     write(1, "salut\n", 6);
