@@ -14,7 +14,10 @@ void init_cube(char *cube)
             }
         }
     }
-    
+}
+
+void print_cube(char *cube)
+{
     for(int i = 0; i < 6; i++)
     {
         for (int j = 0; j < 3; j++)
@@ -37,6 +40,8 @@ int main()
         exit(1);
 
     init_cube(cube);
+
+    print_cube(cube);
 
     free(cube);
 

@@ -7,8 +7,7 @@ FLAGS_RAYLIB = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 SRC_DIR = src
 OBJ_DIR = obj
 
-SRC = main.c \
-		graphics/cube.c
+SRC = main.c
 	
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
