@@ -1,4 +1,2 @@
-obj/*.o
-obj/graphics/*.o
 rubik
 .vscode/*
